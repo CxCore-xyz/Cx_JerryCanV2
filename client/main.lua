@@ -34,7 +34,7 @@ AddEventHandler('CxC-Bakelis:client:UseJerrycan', function()
         return
     end
     local curVeh = QBCore.Functions.GetClosestVehicle()
-    local vehicleFuel = exports[Config.FuelScript]:GetFuel(curVeh)
+    local vehicleFuel = DecorGetFloat(curVeh, Config.FuelDecor)
     if vehicleFuel < 100 then
         TaskTurnPedToFaceEntity(ped, curVeh, 1000)
         Wait(1000)
@@ -49,7 +49,7 @@ AddEventHandler('CxC-Bakelis:client:UseJerrycan', function()
             disableMouse = false,
             disableCombat = true,
         }, {}, {}, {}, function() -- Done
-            exports[Config.FuelScript]:SetFuel(curVeh, vehicleFuel + Config.FillAmount)
+            AddFuelToVehicle(curVeh, vehicleFuel + Config.FillAmount)
             QBCore.Functions.Notify(Lang:t("success.success"), 'success')
             TriggerServerEvent('CxC-Bakelis:server:RemoveItem', Config.JerryCanItem, 1)
             TriggerServerEvent('debug:server:side:new', 'three')
