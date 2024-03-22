@@ -6,8 +6,8 @@ Config.ScriptLicense = "FREE-USE" -- Don't touch this, this is free use licensek
 Config.ScriptAuthor = "CxCCore.xyz" -- Don't touch this or the script won't work
 Config.ScriptDiscord = "Dsc.gg/CxCCore" -- Don't touch this or the script won't work
 
---Fuel script settings
-Config.FuelScript = "LegacyFuel" -- Your server fuel script name / uses export['scriptname']:setfuel()
+--Fuel decor settings
+Config.FuelDecor = "_FUEL_LEVEL" -- Do not touch this just leave it alone
 
 --Distance checking settings
 Config.FillDistance = 2.5 -- Recommended 2.5 or above no lower
