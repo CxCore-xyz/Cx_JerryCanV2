@@ -3,13 +3,9 @@
 
 # Features
 *+Configurable Fill Amount*
-
 *+QB-Target JerryCan Purchasing From Any Gas Pump*
-
 *+Debuging Option.*
-
 *+Backitem Prop.*
-
 *+Locales File.*
 
 dsc.gg/CxCCore 
