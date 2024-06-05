@@ -21,8 +21,7 @@ AddEventHandler('server:can:prop:new', function(type)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if type == 'add' then
-       Wait(1000)
-       GiveWeaponToPed(src,Config.JerryCanProp,0,true,true)
+       GiveWeaponToPed(src,Config.JerryCanProp,5,true,true)
        if Config.Debug then print("^0[^5Debug^7][^3Information^0]: Jerry can prop was spawned for this player-ID: ^5"..src) end
     elseif type == 'remove' then
        GiveWeaponToPed(src,"weapon_unarmed",0,true,true)
