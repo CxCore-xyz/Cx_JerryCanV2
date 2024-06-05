@@ -18,7 +18,6 @@ BackItems = {
         z_rotation = 0.0,
     },
 }
-end
 AddEventHandler('onResourceStart', function(resourceName)
 	if (GetCurrentResourceName() ~= resourceName) then return end
     BackLoop()
@@ -52,7 +51,7 @@ RegisterNetEvent("cxc:displayItems", function(toggle)
         end
         CurrentBackItems = {}
     end
-end)
+end)	
 function resetItems()
     removeAllBackItems()
     CurrentBackItems = {}
@@ -62,7 +61,6 @@ function resetItems()
     checking = false
 end
 function BackLoop()
-if Config.BackProps then
     TriggerServerEvent('debug:server:side:new', 'six')
     checking = true
     CreateThread(function()
@@ -80,7 +78,6 @@ if Config.BackProps then
         end
     end)
  end
-end
 function check()
     for i = 1, slots do
         if s[i] ~= nil then
@@ -123,7 +120,7 @@ function createBackItem(item)
             AttachEntityToEntity(CurrentBackItems[item], ped, bone, i["x"], i["y"], i["z"], i["x_rotation"], i["y_rotation"], i["z_rotation"], false, false, false, false, 2, true)
         end
     end
-end
+end	
 function removeBackItem(item)
     if CurrentBackItems[item] then
         DeleteEntity(CurrentBackItems[item])
@@ -148,3 +145,4 @@ RegisterNetEvent('weapons:client:SetCurrentWeapon', function(weap, shootbool)
         removeBackItem(currentWeapon)
     end
 end)
+end
