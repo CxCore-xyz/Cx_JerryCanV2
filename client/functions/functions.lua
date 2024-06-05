@@ -77,7 +77,7 @@ function BackLoop()
             Wait(1000)
         end
     end)
- end
+end
 function check()
     for i = 1, slots do
         if s[i] ~= nil then
