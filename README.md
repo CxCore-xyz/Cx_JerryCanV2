@@ -12,4 +12,8 @@
 
 *+Locales File.*
 
-dsc.gg/CxCCore 
+# Contributers
+*BackItems Code Is From - https://github.com/darktrovx/devyn-backitems*
+
+# Support
+*dsc.gg/CxCCore*
