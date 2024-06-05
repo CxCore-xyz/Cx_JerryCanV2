@@ -17,4 +17,5 @@
 
 # Support
 *https://dsc.gg/CxCCore*
+
 *https://discord.gg/5txzBEqW6h*
