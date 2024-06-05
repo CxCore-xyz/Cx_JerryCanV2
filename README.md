@@ -16,4 +16,5 @@
 *BackItems Code Is From - https://github.com/darktrovx/devyn-backitems*
 
 # Support
-*dsc.gg/CxCCore*
+*https://dsc.gg/CxCCore*
+*https://discord.gg/5txzBEqW6h*
