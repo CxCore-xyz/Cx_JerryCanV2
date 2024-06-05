@@ -12,7 +12,7 @@
 
 *+Locales File.*
 
-# Contributers
+# Contributors
 *BackItems Code Is From - https://github.com/darktrovx/devyn-backitems*
 
 # Support
