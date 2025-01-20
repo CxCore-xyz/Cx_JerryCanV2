@@ -6,6 +6,9 @@ Config.ScriptLicense = "FREE-USE" -- Don't touch this, this is free use licensek
 Config.ScriptAuthor = "CxCore.xyz" -- Don't touch this or the script won't work
 Config.ScriptDiscord = "Dsc.gg/CxCCore" -- Don't touch this or the script won't work
 
+--Language settings
+Config.Language = "en" -- For now only en and lt
+
 --Fuel decor settings
 Config.FuelDecor = "_FUEL_LEVEL" -- Do not touch this just leave it alone
 
