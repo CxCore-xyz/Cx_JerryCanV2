@@ -14,7 +14,7 @@ local Translations = {
         ["progress_bar"] = "Refueling Vehicle",
     },
     target = {
-        ["buy_can"] = "Pirkti Degalų Bakeli Už $",
+        ["buy_can"] = "Buy Jerrycan For $",
     },
     warning = {},
 }
