@@ -5,6 +5,7 @@ local Translations = {
         ["toofaraway"] = "Esate per toli nuo tr.priemonės!",
         ["nomoney"] = "Neturite pakankamai pinigu degalų bakeliui!",
         ["full_tank"] = "Tr.Priemonės degalų bakas yra pilnas!",
+        ["nospace"] = "Jūsų inventorius yra pilnas!",
     },
     success = {
         ["success"] = "Sėkminga užpilėtę degalus į tr.priemonę!",
