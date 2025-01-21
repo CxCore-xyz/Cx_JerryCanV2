@@ -5,7 +5,7 @@ CreateThread(function()
              type = Config.TargetType, 
              event = Config.TargetTrigger, 
              icon =  Config.TargetIcon, 
-             label = Config.TargetTranslation ..Config.GasCanPrice 
+             label = Lang:t("target.buy_can") ..Config.GasCanPrice 
           } 
       }, 
       distance = 2.5 
