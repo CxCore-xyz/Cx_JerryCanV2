@@ -4,7 +4,8 @@ CreateThread(function()
           { 
              type = Config.TargetType, 
              event = Config.TargetTrigger, 
-             icon =  Config.TargetIcon, label = Config.TargetTranslation ..Config.GasCanPrice 
+             icon =  Config.TargetIcon, 
+             label = Config.TargetTranslation ..Config.GasCanPrice 
           } 
       }, 
       distance = 2.5 
