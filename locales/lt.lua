@@ -13,6 +13,9 @@ local Translations = {
         ["invehicle"] = "Negalite atlikti šio veiksmo sėdint tr.priemonei!",
         ["progress_bar"] = "Pilami Degalai",
     },
+    target = {
+        ["buy_can"] = "Pirkti Degalų Bakeli Už $",
+    },
     warning = {},
 }
 
