@@ -5,6 +5,7 @@ local Translations = {
         ["toofaraway"] = "You are too far away from any vehicle!",
         ["nomoney"] = "You don't have enough money for an gas can!",
         ["full_tank"] = "Vehicles fuel tank is full!",
+        ["nospace"] = "Your inventory is full!",
     },
     success = {
         ["success"] = "You successfully refueled vehicle!",
