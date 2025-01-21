@@ -32,7 +32,6 @@ Config.TargetScript = "qb-target" -- Your target script name
 Config.TargetType = "server" -- Client or server
 Config.TargetIcon = "fas fa-gas-pump" -- Icon for target
 Config.TargetTrigger = "CxC:Purchase:JerryCan:Server" -- Trigger for purchasing boat gas can
-Config.TargetTranslation = "Purchase JerryCan For $"
 Config.GasPumpModels = { -- Models for the target
     "prop_gas_pump_1d",
     "prop_gas_pump_1a",
