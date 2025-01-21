@@ -13,6 +13,9 @@ local Translations = {
         ["invehicle"] = "You can't be inside any vehicle while refueling!",
         ["progress_bar"] = "Refueling Vehicle",
     },
+    target = {
+        ["buy_can"] = "Pirkti Degalų Bakeli Už $",
+    },
     warning = {},
 }
 
