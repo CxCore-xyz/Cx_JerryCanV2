@@ -29,6 +29,23 @@ AddEventHandler('server:can:prop:new', function(type)
     end
 end)
 
+RegisterNetEvent("CxC:Purchase:JerryCan:Server")
+AddEventHandler("CxC:Purchase:JerryCan:Server", function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.PlayerData.money.cash >= Config.GasCanPrice then
+       if not Player.Functions.AddItem(Config.JerryCanItem, Config.GasCanAmount) then return TriggerClientEvent('QBCore:Notify', src, Lang:t("error.nospace"), "error") end
+          Player.Functions.RemoveMoney(Config.GasPaymentType, Config.GasCanPrice)
+          if Config.Core == "OldQB" then
+             TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.JerryCanItem], "add")
+          elseif Config.Core == "NewQB" then
+             TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items[Config.JerryCanItem], "add")
+          end
+      else
+          TriggerClientEvent('QBCore:Notify', src, Lang:t("error.nomoney"), "error")
+      end
+end)
+
 RegisterServerEvent('debug:server:side:new')
 AddEventHandler('debug:server:side:new', function(type)
     local src = source
@@ -45,6 +62,10 @@ AddEventHandler('debug:server:side:new', function(type)
        if Config.Debug then print("^0[^5Debug^7][^1Error^0]: Couldn't use jerrycan on vehicle because this player-ID: ^4"..src.." ^0was in vehicle driverseat when trying to fill the tank") end
     elseif type == 'six' then
        if Config.Debug then print("^0[^5Debug^7][^3Information^0]: Items prop loop was started") end
+    elseif type == 'seven' then
+       if Config.Debug then print("^0[^5Debug^7][^3Information^0]: Successfully bought an jerrycan from gas station player-ID: ^5"..src) end
+    elseif type == 'eight' then
+       if Config.Debug then print("^0[^5Debug^7][^3Information^0]: Jerrycan purchasing was canceled") end
     end
 end)
 
@@ -62,17 +83,4 @@ AddEventHandler('onResourceStart', function(resourceName)
         Wait(scriptshuttimer)
         os.exit()
     end
-end)
-
-RegisterNetEvent("CxC:Purchase:JerryCan:Server")
-AddEventHandler("CxC:Purchase:JerryCan:Server", function()
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-    if Player.PlayerData.money.cash >= Config.GasCanPrice then
-       if not Player.Functions.AddItem(Config.JerryCanItem, Config.GasCanAmount) then return TriggerClientEvent('QBCore:Notify', src, Lang:t("error.nospace"), "error") end
-          Player.Functions.RemoveMoney(Config.GasPaymentType, Config.GasCanPrice)
-          TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.JerryCanItem], "add")
-      else
-          TriggerClientEvent('QBCore:Notify', src, Lang:t("error.nomoney"), "error")
-      end
 end)
