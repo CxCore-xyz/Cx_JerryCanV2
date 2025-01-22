@@ -1,4 +1,3 @@
-if Config.Language == "en" then
 local Translations = {
     error = {
         ["canceled"] = "Refueling was canceled!",
@@ -26,4 +25,3 @@ Lang = Locale:new({
     phrases = Translations,
     warnOnMissing = true
 })
-end
