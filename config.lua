@@ -6,6 +6,9 @@ Config.ScriptLicense = "FREE-USE" -- Don't touch this, this is free use licensek
 Config.ScriptAuthor = "CxCore.xyz" -- Don't touch this or the script won't work
 Config.ScriptDiscord = "Dsc.gg/CxCCore" -- Don't touch this or the script won't work
 
+--Core settings
+Config.Core = "NewQB" -- NewQB or OldQB 
+
 --Language settings
 Config.Language = "en" -- For now only en and lt
 
@@ -29,9 +32,9 @@ Config.JerryCanProp = "weapon_petrolcan" -- An item wich the ped will hold when 
 --Target settings for gas station purchasing
 Config.TargetPurchase = true -- Don't need it? Make it false
 Config.TargetScript = "qb-target" -- Your target script name
-Config.TargetType = "server" -- Client or server
+Config.TargetType = "client" -- Client or server
 Config.TargetIcon = "fas fa-gas-pump" -- Icon for target
-Config.TargetTrigger = "CxC:Purchase:JerryCan:Server" -- Trigger for purchasing boat gas can
+Config.TargetTrigger = "CxC-Bakelis:client:BuyJerrycan" -- Trigger for purchasing boat gas can
 Config.GasPumpModels = { -- Models for the target
     "prop_gas_pump_1d",
     "prop_gas_pump_1a",
@@ -43,6 +46,7 @@ Config.GasPumpModels = { -- Models for the target
 }
 
 --Purchasing gas can in gas station settingss
+Config.PurchaseTime = 5000 -- Time of purchasing progressbar
 Config.GasCanAmount = 1 -- Amount wich will be given to player after purchase
 Config.GasPaymentType = "cash" -- Cash or bank
 Config.GasCanPrice = 200 -- Price for jerry can at gas station
