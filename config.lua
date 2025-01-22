@@ -1,5 +1,7 @@
 Config = Config or {}
 
+--Want to change language locale? Change it in the fxmanifest.lua
+
 --Authentication
 Config.ScriptAuthentication = true -- Server will not work with this function set to false this is for security reasons
 Config.ScriptLicense = "FREE-USE" -- Don't touch this, this is free use licensekey
