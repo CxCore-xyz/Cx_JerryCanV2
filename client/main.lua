@@ -78,7 +78,6 @@ AddEventHandler('CxC-Bakelis:client:BuyJerrycan', function()
         disableCombat = true,
     }, {}, {}, {}, function() -- Done
         TriggerServerEvent('CxC:Purchase:JerryCan:Server')
-        QBCore.Functions.Notify(Lang:t("success.jerrycan"), 'success')
         TriggerServerEvent('debug:server:side:new', 'seven')
     end, function() -- Cancel
         TriggerServerEvent('debug:server:side:new', 'eight')
