@@ -71,6 +71,7 @@ end)
 
 RegisterNetEvent('CxC-Bakelis:client:BuyJerrycan')
 AddEventHandler('CxC-Bakelis:client:BuyJerrycan', function()
+    TaskStartScenarioInPlace(PlayerPedId(), "PROP_HUMAN_PARKING_METER", 0, true)
     QBCore.Functions.Progressbar("buy_jerrycan", Lang:t("info.progress_buyjerry"), Config.PurchaseTime, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -79,8 +80,10 @@ AddEventHandler('CxC-Bakelis:client:BuyJerrycan', function()
     }, {}, {}, {}, function() -- Done
         TriggerServerEvent('CxC:Purchase:JerryCan:Server')
         TriggerServerEvent('debug:server:side:new', 'seven')
+        ClearPedTasks(PlayerPedId())
     end, function() -- Cancel
         TriggerServerEvent('debug:server:side:new', 'eight')
         QBCore.Functions.Notify(Lang:t("error.canceled"), 'error')
+        ClearPedTasks(PlayerPedId())
     end)
 end)
