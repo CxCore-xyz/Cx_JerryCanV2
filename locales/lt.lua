@@ -8,11 +8,13 @@ local Translations = {
         ["nospace"] = "Jūsų inventorius yra pilnas!",
     },
     success = {
-        ["success"] = "Sėkminga užpilėtę degalus į tr.priemonę!",
+        ["success"] = "Sėkmingai užpilėtę degalus į tr.priemonę!",
+        ["jerrycan"] = "Sėkmingai nusipirkote bakeli!",
     },
     info = {
         ["invehicle"] = "Negalite atlikti šio veiksmo sėdint tr.priemonei!",
         ["progress_bar"] = "Pilami Degalai",
+        ["progress_buyjerry"] = "Perkamas Bakelis",
     },
     target = {
         ["buy_can"] = "Pirkti Degalų Bakeli Už $",
