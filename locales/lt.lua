@@ -1,4 +1,3 @@
-if Config.Language == "lt" then
 local Translations = {
     error = {
         ["canceled"] = "Degalų pilimas atšauktas!",
@@ -26,4 +25,3 @@ Lang = Locale:new({
     phrases = Translations,
     warnOnMissing = true
 })
-end
