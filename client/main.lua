@@ -2,13 +2,15 @@ local QBCore = exports['qb-core']:GetCoreObject()
 local isLoggedIn = LocalPlayer.state['isLoggedIn']
 local fueling = false
 
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
+AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
         isLoggedIn = true
         fueling = false
         TriggerServerEvent('remove:can:prop')
 end)
 
-RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
+RegisterNetEvent('QBCore:Client:OnPlayerUnload')
+AddEventHandler('QBCore:Client:OnPlayerUnload', function()
         isLoggedIn = false
         fueling = false
         TriggerServerEvent('remove:can:prop')
@@ -65,4 +67,21 @@ AddEventHandler('CxC-Bakelis:client:UseJerrycan', function()
     else
         QBCore.Functions.Notify(Lang:t("error.full_tank"), 'error')
     end
+end)
+
+RegisterNetEvent('CxC-Bakelis:client:BuyJerrycan')
+AddEventHandler('CxC-Bakelis:client:BuyJerrycan', function()
+    QBCore.Functions.Progressbar("buy_jerrycan", Lang:t("info.progress_buyjerry"), Config.PurchaseTime, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function() -- Done
+        TriggerServerEvent('CxC:Purchase:JerryCan:Server')
+        QBCore.Functions.Notify(Lang:t("success.jerrycan"), 'success')
+        TriggerServerEvent('debug:server:side:new', 'seven')
+    end, function() -- Cancel
+        TriggerServerEvent('debug:server:side:new', 'eight')
+        QBCore.Functions.Notify(Lang:t("error.canceled"), 'error')
+    end)
 end)
