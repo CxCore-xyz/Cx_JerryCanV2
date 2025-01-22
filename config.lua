@@ -9,9 +9,6 @@ Config.ScriptDiscord = "Dsc.gg/CxCCore" -- Don't touch this or the script won't 
 --Core settings
 Config.Core = "NewQB" -- NewQB or OldQB 
 
---Language settings
-Config.Language = "en" -- For now only en and lt
-
 --Fuel decor settings
 Config.FuelDecor = "_FUEL_LEVEL" -- Do not touch this just leave it alone
 
