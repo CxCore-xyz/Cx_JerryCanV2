@@ -36,7 +36,7 @@ AddEventHandler("CxC:Purchase:JerryCan:Server", function()
     if Player.PlayerData.money.cash >= Config.GasCanPrice then
        if not Player.Functions.AddItem(Config.JerryCanItem, Config.GasCanAmount) then return TriggerClientEvent('QBCore:Notify', src, Lang:t("error.nospace"), "error") end
           Player.Functions.RemoveMoney(Config.GasPaymentType, Config.GasCanPrice)
-          TriggerClientEvent('QBCore:Notify', src, Lang:t("success.jerrycan"), "error")
+          TriggerClientEvent('QBCore:Notify', src, Lang:t("success.jerrycan"), "success")
           if Config.Core == "OldQB" then
              TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.JerryCanItem], "add")
           elseif Config.Core == "NewQB" then
