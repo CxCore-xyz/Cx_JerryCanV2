@@ -1,16 +1,13 @@
 local QBCore = exports['qb-core']:GetCoreObject()
-local fueling = false
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
-        fueling = false
-        TriggerServerEvent('remove:can:prop')
+   TriggerServerEvent('server:can:prop:new', 'remove')
 end)
 
 RegisterNetEvent('QBCore:Client:OnPlayerUnload')
 AddEventHandler('QBCore:Client:OnPlayerUnload', function()
-        fueling = false
-        TriggerServerEvent('remove:can:prop')
+    TriggerServerEvent('server:can:prop:new', 'remove')
 end)
 
 RegisterNetEvent('CxC-Bakelis:client:UseJerrycan')
@@ -40,7 +37,6 @@ AddEventHandler('CxC-Bakelis:client:UseJerrycan', function()
         TriggerServerEvent('server:can:prop:new', 'add')
         Wait(500)
         TriggerEvent('CxC:JerryCan:Animation:Trigger')
-        fueling = true
         TriggerEvent("cxc:displayItems", false)
         QBCore.Functions.Progressbar("reful_veh", Lang:t("info.progress_bar"), Config.FillTime, false, true, {
             disableMovement = true,
@@ -58,7 +54,6 @@ AddEventHandler('CxC-Bakelis:client:UseJerrycan', function()
             TriggerServerEvent('server:can:prop:new', 'remove')
             TriggerServerEvent('debug:server:side:new', 'two')
             TriggerEvent("cxc:displayItems", true)
-            fueling = false
             QBCore.Functions.Notify(Lang:t("error.canceled"), 'error')
         end)
     else
