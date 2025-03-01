@@ -1,4 +1,9 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+if Config.Core == "NewQB" then
+    QBCore = exports['qb-core']:GetCoreObject()
+elseif Config.Core == "OldQB" then 
+    QBCore = nil
+    TriggerEvent("QBCore:GetObject", function(obj) QBCore = obj end)
+end
 
 RegisterServerEvent('CxC-Bakelis:server:RemoveItem')
 AddEventHandler('CxC-Bakelis:server:RemoveItem', function(item, amount)
