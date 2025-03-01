@@ -1,17 +1,14 @@
 local QBCore = exports['qb-core']:GetCoreObject()
-local isLoggedIn = LocalPlayer.state['isLoggedIn']
 local fueling = false
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
-        isLoggedIn = true
         fueling = false
         TriggerServerEvent('remove:can:prop')
 end)
 
 RegisterNetEvent('QBCore:Client:OnPlayerUnload')
 AddEventHandler('QBCore:Client:OnPlayerUnload', function()
-        isLoggedIn = false
         fueling = false
         TriggerServerEvent('remove:can:prop')
 end)
