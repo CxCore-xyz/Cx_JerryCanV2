@@ -20,6 +20,9 @@ Config.FillDistance = 2.5 -- Recommended 2.5 or above no lower
 --Fill time settings
 Config.FillTime = 15000 -- 15Seconds
 
+--Refil system settings
+Config.UseRefillSystem = true -- Set it false if you don't want jerrycan refilling (UPCOMING)
+
 --Item & Fill settings
 Config.JerryCanItem = "jerry_can" -- Your jerrycan item name | The item wich you want to work as jerrycan/gas can
 Config.FillAmount = 20 -- Fill amount from 0 to 100 | This will add the amount to the current vehicle gas amount
