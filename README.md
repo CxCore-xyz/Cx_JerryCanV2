@@ -12,6 +12,15 @@
 
 *+Locales File.*
 
+# QB-CORE/SHARED/ITEMS.LUA
+# OLDQBCore
+    ["jerry_can"] 				 = {["name"] = "jerry_can", 				["label"] = "Jerry Can (20L)", 			["weight"] = 20000, 		["type"] = "item", 		["image"] = "jerry_can.png", 		["unique"] = true, 	["useable"] = true, 	["shouldClose"] = true, ["combinable"] = nil,   ["description"] = ""},
+    ["empty_jerry_can"] 				 = {["name"] = "empty_jerry_can", 				["label"] = "Empty Jerry Can", 			["weight"] = 1000, 		["type"] = "item", 		["image"] = "jerry_can.png", 		["unique"] = true, 	["useable"] = true, 	["shouldClose"] = true, ["combinable"] = nil,   ["description"] = ""},
+
+# NEWQBCore
+    jerry_can 				 = {name = 'jerry_can', 				label = 'Jerry Can (20L)', 			weight = 20000, 		type = 'item', 		image = 'jerry_can.png', 		unique = true, 	useable = true, 	shouldClose = true, combinable = nil,   description = ''},
+    empty_jerry_can 				 = {name = 'empty_jerry_can', 				label = 'Empty Jerry Can', 			weight = 1000, 		type = 'item', 		image = 'jerry_can.png', 		unique = true, 	useable = true, 	shouldClose = true, combinable = nil,   description = ''},
+  
 # Contributors
 *BackItems Code Is From - https://github.com/darktrovx/devyn-backitems*
 
