@@ -26,6 +26,13 @@
 # Contributors
 *BackItems Code Is From - https://github.com/darktrovx/devyn-backitems*
 
+# Requirements
+• QB-CORE - https://github.com/qbcore-framework/qb-core
+
+• QB-TARGET - https://github.com/qbcore-framework/qb-target
+
+• PROGRESSBAR - https://github.com/qbcore-framework/progressbar
+
 # Support
 *https://dsc.gg/CxCCore*
 
