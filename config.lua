@@ -22,6 +22,10 @@ Config.FillTime = 15000 -- 15Seconds
 
 --Refil system settings
 Config.UseRefillSystem = true -- Set it false if you don't want jerrycan refilling (UPCOMING)
+Config.RefillCanTime = math.random(4500, 11500) -- Time of refilling jerry can progressbar
+Config.GasCanRefilledAmount = 1 -- Amount wich will be given to player after purchase
+Config.GasRefillPaymentType = "cash" -- Cash or bank
+Config.GasRefillPrice = 150 -- Price for jerry can refill at gas station
 
 --Item & Fill settings
 Config.JerryCanItem = "jerry_can" -- Your jerrycan item name | The item wich you want to work as jerrycan/gas can
