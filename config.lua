@@ -20,13 +20,6 @@ Config.FillDistance = 2.5 -- Recommended 2.5 or above no lower
 --Fill time settings
 Config.FillTime = 15000 -- 15Seconds
 
---Refil system settings
-Config.UseRefillSystem = true -- Set it false if you don't want jerrycan refilling (UPCOMING)
-Config.RefillCanTime = math.random(4500, 11500) -- Time of refilling jerry can progressbar
-Config.GasCanRefilledAmount = 1 -- Amount wich will be given to player after purchase
-Config.GasRefillPaymentType = "cash" -- Cash or bank
-Config.GasRefillPrice = 150 -- Price for jerry can refill at gas station
-
 --Item & Fill settings
 Config.JerryCanItem = "jerry_can" -- Your jerrycan item name | The item wich you want to work as jerrycan/gas can
 Config.FillAmount = 20 -- Fill amount from 0 to 100 | This will add the amount to the current vehicle gas amount
@@ -53,13 +46,20 @@ Config.RefillTargetType = "client"
 Config.RefillTargetIcon = "fas fa-gas-pump"
 Config.RefillTargetTrigger = ""
 
+--Refill system settings
+Config.UseRefillSystem = true -- Set it false if you don't want jerrycan refilling (UPCOMING)
+Config.RefillCanTime = math.random(4500, 11500) -- Time of refilling jerry can progressbar
+Config.GasCanRefilledAmount = 1 -- Amount wich will be given to player after purchase
+Config.GasRefillPaymentType = "cash" -- Cash or bank
+Config.GasRefillPrice = 150 -- Price for jerry can refill at gas station
+
 --Target settings for gas station purchasing
 Config.TargetType = "client" -- Client or server
 Config.TargetIcon = "fas fa-gas-pump" -- Icon for target
 Config.TargetTrigger = "CxC-Bakelis:client:BuyJerrycan" -- Trigger for purchasing boat gas can
 
 --Purchasing gas can in gas station settingss
-Config.PurchaseTime = 5000 -- Time of purchasing progressbar
+Config.PurchaseTime = math.random(4500, 11500) -- Time of purchasing progressbar
 Config.GasCanAmount = 1 -- Amount wich will be given to player after purchase
 Config.GasPaymentType = "cash" -- Cash or bank
 Config.GasCanPrice = 200 -- Price for jerry can at gas station
