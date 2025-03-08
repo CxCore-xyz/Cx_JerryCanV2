@@ -1,6 +1,7 @@
 CreateThread(function() 
    if Config.UseTargetSystem then exports[Config.TargetScript]:AddTargetModel(Config.GasPumpModels, { 
-      options = {           if Config.UseRefillSystem then
+      options = {           
+          if Config.UseRefillSystem then
           { 
              --type = Config.RefillTargetType, 
              --event = Config.RefillTargetTrigger, 
