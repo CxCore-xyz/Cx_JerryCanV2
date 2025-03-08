@@ -35,12 +35,9 @@ Config.FillAmount = 20 -- Fill amount from 0 to 100 | This will add the amount t
 Config.BackProps = true -- If you don't want on back prop make it false
 Config.JerryCanProp = "weapon_petrolcan" -- An item wich the ped will hold when the animation starts
 
---Target settings for gas station purchasing
-Config.TargetPurchase = true -- Don't need it? Make it false
+--Target usage settings
+Config.UseTargetSystem = true -- Don't need it? Make it false
 Config.TargetScript = "qb-target" -- Your target script name
-Config.TargetType = "client" -- Client or server
-Config.TargetIcon = "fas fa-gas-pump" -- Icon for target
-Config.TargetTrigger = "CxC-Bakelis:client:BuyJerrycan" -- Trigger for purchasing boat gas can
 Config.GasPumpModels = { -- Models for the target
     "prop_gas_pump_1d",
     "prop_gas_pump_1a",
@@ -50,6 +47,16 @@ Config.GasPumpModels = { -- Models for the target
     "prop_gas_pump_old2",
     "prop_gas_pump_old3"
 }
+
+--Target settings for gas station refilling
+Config.RefillTargetType = "client"
+Config.RefillTargetTrigger = ""
+Config.RefillTargetIcon = "fas fa-gas-pump"
+
+--Target settings for gas station purchasing
+Config.TargetType = "client" -- Client or server
+Config.TargetIcon = "fas fa-gas-pump" -- Icon for target
+Config.TargetTrigger = "CxC-Bakelis:client:BuyJerrycan" -- Trigger for purchasing boat gas can
 
 --Purchasing gas can in gas station settingss
 Config.PurchaseTime = 5000 -- Time of purchasing progressbar
