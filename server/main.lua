@@ -55,7 +55,6 @@ end)
 RegisterServerEvent('debug:server:side:new')
 AddEventHandler('debug:server:side:new', function(type)
     local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
     if type == 'one' then
        if Config.Debug then print("^0[^5Debug^7][^3Information^0]: Animation loop started for this player-ID: ^5"..src) end
     elseif type == 'two' then
@@ -67,11 +66,17 @@ AddEventHandler('debug:server:side:new', function(type)
     elseif type == 'five' then
        if Config.Debug then print("^0[^5Debug^7][^1Error^0]: Couldn't use jerrycan on vehicle because this player-ID: ^4"..src.." ^0was in vehicle driverseat when trying to fill the tank") end
     elseif type == 'six' then
-       if Config.Debug then print("^0[^5Debug^7][^3Information^0]: Items prop loop was started") end
+       if Config.Debug then print("^0[^5Debug^7][^3Information^0]: Items prop loop was started player-ID: ^5"..src) end
     elseif type == 'seven' then
        if Config.Debug then print("^0[^5Debug^7][^3Information^0]: Successfully bought an jerrycan from gas station player-ID: ^5"..src) end
     elseif type == 'eight' then
-       if Config.Debug then print("^0[^5Debug^7][^3Information^0]: Jerrycan purchasing was canceled") end
+       if Config.Debug then print("^0[^5Debug^7][^3Information^0]: Jerrycan purchasing was canceled player-ID: ^5"..src) end
+    elseif type == 'nine' then
+       if Config.Debug then print("^0[^5Debug^7][^3Information^0]: Jerrycan was successfully refilled rom gas station player-ID: ^5"..src) end    
+    elseif type == 'ten' then
+       if Config.Debug then print("^0[^5Debug^7][^3Information^0]: Jerrycan refilling was canceled player-ID: ^5"..src) end    
+    elseif type == 'eleven' then
+       if Config.Debug then print("^0[^5Debug^7][^3Information^0]: An error occured player-ID: ^5"..src) end               
     end
 end)
 
