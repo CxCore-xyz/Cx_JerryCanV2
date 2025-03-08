@@ -37,7 +37,7 @@ Config.JerryCanProp = "weapon_petrolcan" -- An item wich the ped will hold when 
 
 --Target usage settings
 Config.UseTargetSystem = true -- Don't need it? Make it false
-Config.TargetScript = "qb-target" -- Your target script name
+Config.TargetScript = "qb-target" -- Your target script name for now only qb-target you can edit to yours in client/functions/target.lua
 Config.GasPumpModels = { -- Models for the target
     "prop_gas_pump_1d",
     "prop_gas_pump_1a",
@@ -50,8 +50,8 @@ Config.GasPumpModels = { -- Models for the target
 
 --Target settings for gas station refilling
 Config.RefillTargetType = "client"
-Config.RefillTargetTrigger = ""
 Config.RefillTargetIcon = "fas fa-gas-pump"
+Config.RefillTargetTrigger = ""
 
 --Target settings for gas station purchasing
 Config.TargetType = "client" -- Client or server
