@@ -7,6 +7,9 @@ CreateThread(function()
              icon =  Config.TargetIcon, 
              label = Lang:t("target.buy_can") ..Config.GasCanPrice 
           } 
+          if Config.UseRefillSystem then
+                     
+          end
       }, 
       distance = 2.5 
       }) 
