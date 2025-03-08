@@ -17,6 +17,7 @@ local Translations = {
     },
     target = {
         ["buy_can"] = "Pirkti Degalų Bakeli Už $",
+        ["refill_can"] = "Pripildyti Banekli Už $",
     },
     warning = {},
 }
