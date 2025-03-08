@@ -17,6 +17,7 @@ local Translations = {
     },
     target = {
         ["buy_can"] = "Buy Jerrycan For $",
+        ["refill_can"] = "Refill Jerrycan For $",
     },
     warning = {},
 }
